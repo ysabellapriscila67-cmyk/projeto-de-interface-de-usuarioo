@@ -1,0 +1,154 @@
+# 🌿 PureGlow Skincare - Loja Virtual de Produtos para Cuidados com a Pele
+
+Este é um projeto de desenvolvimento web criado para representar uma marca moderna de skincare chamada **PureGlow Skincare**. O objetivo foi desenvolver um site elegante, minimalista e interativo para apresentar produtos de cuidados com a pele, proporcionando uma experiência agradável e intuitiva para os usuários.
+
+---
+
+## 🎨 Paleta de Cores e Estética
+
+As cores foram escolhidas para transmitir sensação de limpeza, bem-estar, cuidado e naturalidade.
+
+* **Fundo Principal:** `#F8F6F2` (Bege suave)
+* **Painéis e Cards:** `#FFFFFF` (Branco)
+* **Destaque Principal:** `#A8D5BA` (Verde suave)
+* **Destaque Secundário:** `#7FB685` (Verde natural)
+* **Texto Principal:** `#2D2D2D` (Cinza escuro)
+* **Texto Secundário:** `#7A7A7A` (Cinza claro)
+* **Sucesso:** `#4CAF50` (Verde)
+* **Erro:** `#F44336` (Vermelho)
+
+---
+
+## 📁 Estrutura do Projeto
+
+O projeto foi dividido em seis arquivos principais:
+
+### 📄 index.html
+
+Página inicial da loja.
+
+Contém:
+
+* Logotipo da marca
+* Menu de navegação
+* Banner promocional
+* Apresentação da empresa
+* Produtos em destaque
+* Avaliações de clientes
+* Rodapé
+
+---
+
+### 📄 sobre.html
+
+Página dedicada à história da marca.
+
+Contém:
+
+* História da empresa
+* Missão
+* Valores
+* Filosofia dos produtos
+
+---
+
+### 📄 produtos.html
+
+Página de catálogo.
+
+Contém:
+
+* Sérum Facial
+* Hidratante Facial
+* Sabonete Facial
+* Protetor Solar
+* Máscara Facial
+* Kit Skincare
+
+Cada produto possui:
+
+* Imagem
+* Descrição
+* Preço
+* Botão de compra
+
+---
+
+### 📄 contato.html
+
+Página de contato.
+
+Contém:
+
+* Campo Nome
+* Campo E-mail
+* Campo Mensagem
+* Botão Enviar
+
+---
+
+### 📄 style.css
+
+Arquivo responsável pela identidade visual.
+
+Contém:
+
+* Estilização geral
+* Layout responsivo
+* Efeitos Hover
+* Paleta de cores
+* Fontes modernas
+
+---
+
+### 📄 script.js
+
+Arquivo responsável pelas interações.
+
+Contém:
+
+* Sistema de carrinho
+* Feedback visual
+* Validação de formulários
+* Mensagens de sucesso e erro
+
+---
+
+## 🖼 Recursos Visuais
+
+O projeto utiliza imagens relacionadas ao universo skincare:
+
+* Produtos faciais
+* Ingredientes naturais
+* Rotina de cuidados com a pele
+* Pessoas utilizando os produtos
+* Ambientes clean e minimalistas
+
+---
+
+## ⚙ Funcionalidades
+
+* Navegação entre páginas
+* Catálogo de produtos
+* Carrinho de compras simples
+* Formulário de contato
+* Efeitos visuais interativos
+* Avaliações de clientes
+* Design responsivo
+
+---
+
+## ⭐ Produtos em Destaque
+
+* Glow Serum Vitamina C
+* Hydra Skin Cream
+* Fresh Clean Gel
+* Sun Protect FPS 50
+* Night Repair Serum
+* PureGlow Kit Completo
+
+---
+
+## 🎯 Objetivo do Projeto
+
+O principal objetivo foi criar uma loja virtual moderna para produtos de skincare, transmitindo confiança, qualidade e bem-estar através de um design limpo, elegante e intuitivo. A experiência do usuário foi planejada para facilitar a navegação e destacar os benefícios dos produtos de forma visualmente agradável.
