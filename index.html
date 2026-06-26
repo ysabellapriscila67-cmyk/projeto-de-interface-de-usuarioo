@@ -1,173 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>r.e.m. beauty</title>
 
-<title>PureGlow Skincare</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#F8F6F2,#DFF5E1);
-}
-
-.container{
-    width:900px;
-    height:550px;
-    background:white;
-    border-radius:25px;
-    overflow:hidden;
-    display:flex;
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
-}
-
-.esquerda{
-    width:50%;
-    background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1000')
-    center/cover;
-}
-
-.direita{
-    width:50%;
-    padding:50px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-h1{
-    color:#7FB685;
-    font-size:45px;
-    margin-bottom:10px;
-}
-
-p{
-    color:#777;
-    margin-bottom:30px;
-}
-
-input{
-    padding:15px;
-    margin:10px 0;
-    border:2px solid #A8D5BA;
-    border-radius:12px;
-    outline:none;
-    transition:.3s;
-}
-
-input:focus{
-    border-color:#7FB685;
-}
-
-button{
-    padding:15px;
-    margin-top:15px;
-    border:none;
-    border-radius:12px;
-    background:#7FB685;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    background:#5F9E74;
-}
-
-.links{
-    margin-top:20px;
-    display:flex;
-    justify-content:space-between;
-}
-
-.links a{
-    text-decoration:none;
-    color:#7FB685;
-}
-
-#mensagem{
-    margin-top:20px;
-    font-weight:bold;
-}
-
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="container">
+    <h1>r.e.m. beauty</h1>
+    <p class="subtitle">interstellar dreamscape</p>
 
-<div class="esquerda"></div>
+    <p>junte-se à nossa tripulação</p>
 
-<div class="direita">
+    <form id="formulario">
+        <label>nome</label><br>
+        <input type="text" id="nome"><br>
 
-<h1>PureGlow</h1>
+        <label>e-mail</label><br>
+        <input type="email" id="email"><br><br>
 
-<p>Entre para acessar sua rotina de skincare personalizada.</p>
+        <button type="submit">inscrever-se</button>
+    </form>
 
-<input type="email" id="email" placeholder="Digite seu e-mail">
+    <!-- POPUP -->
+    <div id="popup" class="popup">
+        <div class="popup-box">
+            <p id="popup-msg"></p>
+            <button onclick="fecharPopup()">fechar</button>
+        </div>
+    </div>
 
-<input type="password" id="senha" placeholder="Digite sua senha">
+    <script>
+        const form = document.getElementById("formulario");
+        const popup = document.getElementById("popup");
+        const popupMsg = document.getElementById("popup-msg");
 
-<button onclick="entrar()">Entrar</button>
+        function abrirPopup(mensagem, tipo) {
+            popupMsg.innerHTML = mensagem;
+            popup.className = "popup " + tipo;
+            popup.style.display = "flex";
+        }
 
-<div class="links">
-<a href="#">Esqueceu a senha?</a>
-<a href="#">Criar conta</a>
-</div>
+        function fecharPopup() {
+            popup.style.display = "none";
+        }
 
-<div id="mensagem"></div>
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
 
-</div>
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
 
-</div>
-
-<script>
-
-function entrar(){
-
-let email = document.getElementById("email").value;
-let senha = document.getElementById("senha").value;
-let msg = document.getElementById("mensagem");
-
-if(email === "" || senha === ""){
-
-msg.innerHTML = "❌ Preencha todos os campos.";
-msg.style.color = "#F44336";
-return;
-
-}
-
-if(email === "cliente@pureglow.com" && senha === "123456"){
-
-msg.innerHTML = "✅ Login realizado com sucesso!";
-msg.style.color = "#4CAF50";
-
-}
-else{
-
-msg.innerHTML = "❌ E-mail ou senha incorretos.";
-msg.style.color = "#F44336";
-
-}
-
-}
-
-</script>
+            if (nome === "" || email === "") {
+                abrirPopup(
+                    "⚠️ ops<br>por favor, preencha todos os campos.",
+                    "erro"
+                );
+            } else {
+                abrirPopup(
+                    "🚀 bem-vindo(a) ao espaço<br>obrigado por se juntar a nós, <b>" 
+                    + nome + "</b>!<br>em breve você receberá novidades em <b>" + email + "</b>.",
+                    "sucesso"
+                );
+                form.reset();
+            }
+        });
+    </script>
 
 </body>
 </html>
